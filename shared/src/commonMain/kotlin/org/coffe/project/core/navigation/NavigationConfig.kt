@@ -1,15 +1,20 @@
 package org.coffe.project.core.navigation
 
 import androidx.navigation3.runtime.NavKey
-import androidx.savedstate.serialization.SavedStateConfiguration
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
 
 
-val navigationConfig: SavedStateConfiguration = SavedStateConfiguration {
-    serializersModule = SerializersModule {
-        polymorphic(NavKey::class) {
-            subclass(Menu::class, Menu.serializer())
-        }
+val navigationModule = SerializersModule {
+    polymorphic(NavKey::class) {
+        subclass(Menu::class, Menu.serializer())
+        subclass(Historia::class, Historia.serializer())
+        subclass(Sitios::class, Sitios.serializer())
     }
+}
+
+val savedJson = Json {
+    serializersModule = navigationModule
+    ignoreUnknownKeys = true
 }

@@ -1,4 +1,4 @@
-package org.coffe.project.features
+package org.coffe.project.features.menu
 
 import androidx.compose.runtime.Composable
 

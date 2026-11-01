@@ -6,3 +6,9 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data object Menu: NavKey
+
+@Serializable
+data object Historia : NavKey
+
+@Serializable
+data object Sitios : NavKey
