@@ -4,6 +4,8 @@ import androidx.compose.ui.graphics.Color
 
 // Marrones principales (identidad café)
 val CoffeeDark    = Color(0xFF3E2723)  // Espresso - textos principales
+val CoffeeMediumDark    = Color(0xFF5D4037)  // Espresso - textos principales
+val CoffeeCreamMuted = Color(0xFFF5EBE6) // Un crema casi blanco pero cálido
 val CoffeePrimary = Color(0xFF6F4E37)  // Café tostado - color primario/botones
 val CoffeeMedium  = Color(0xFF8D6E63)  // Café con leche - elementos secundarios
 val CoffeeLight   = Color(0xFFD7CCC8)  // Crema claro - fondos suaves
