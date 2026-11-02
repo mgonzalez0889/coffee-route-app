@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 
 @Serializable
-data object Menu: NavKey
+data object Home: NavKey
 
 @Serializable
 data object Historia : NavKey

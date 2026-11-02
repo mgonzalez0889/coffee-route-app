@@ -3,6 +3,7 @@ package org.coffe.project.features
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -15,25 +16,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.key.Key.Companion.Menu
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.coffe.project.core.navigation.AppNavigation
 import org.coffe.project.core.navigation.Historia
-import org.coffe.project.core.navigation.Menu
+import org.coffe.project.core.navigation.Home
 import org.coffe.project.core.navigation.Sitios
 import org.coffe.project.core.navigation.rememberTopLevelBackStack
 import org.coffe.project.ui.theme.CoffeeAccent
-import org.coffe.project.ui.theme.CoffeeCreamMuted
 import org.coffe.project.ui.theme.CoffeeDark
-import org.coffe.project.ui.theme.CoffeeLight
-import org.coffe.project.ui.theme.CoffeeMedium
 import org.coffe.project.ui.theme.CoffeeMediumDark
 import org.coffe.project.ui.theme.CoffeePrimary
 import org.coffe.project.ui.theme.PrimaryText
 
 @Composable
 fun RootNavigation() {
-    val backStack = rememberTopLevelBackStack(Menu)
+    val backStack = rememberTopLevelBackStack(Home)
 
     Scaffold(
         bottomBar = {
@@ -45,8 +44,8 @@ fun RootNavigation() {
                 windowInsets = NavigationBarDefaults.windowInsets
             ) {
                 NavigationBarItem(
-                    selected = backStack.topLevelKey == Menu,
-                    onClick = { backStack.addTopLevel(Menu) },
+                    selected = backStack.topLevelKey == Home,
+                    onClick = { backStack.addTopLevel(Home) },
                     icon = {
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
@@ -106,10 +105,9 @@ fun RootNavigation() {
                 )
             }
         }
-    ) { innerPadding ->
+    ) {
         AppNavigation(
             backStack = backStack,
-            modifier = Modifier.padding(innerPadding)
         )
     }
 }

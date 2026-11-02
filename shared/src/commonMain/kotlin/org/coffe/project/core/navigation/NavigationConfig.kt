@@ -8,7 +8,7 @@ import kotlinx.serialization.modules.polymorphic
 
 val navigationModule = SerializersModule {
     polymorphic(NavKey::class) {
-        subclass(Menu::class, Menu.serializer())
+        subclass(Home::class, Home.serializer())
         subclass(Historia::class, Historia.serializer())
         subclass(Sitios::class, Sitios.serializer())
     }

@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
-import org.coffe.project.features.menu.MenuScreen
 import org.coffe.project.features.historia.HistoryScreen
+import org.coffe.project.features.inicio.HomeScreen
 import org.coffe.project.features.sitios.SitesScreen
 
 @Composable
@@ -19,7 +19,7 @@ fun AppNavigation(
         onBack = { backStack.removeLastOrNull() },
         modifier = modifier,
         entryProvider = entryProvider {
-            entry<Menu> { MenuScreen() }
+            entry<Home> { HomeScreen() }
 
             entry<Historia> { HistoryScreen() }
 
