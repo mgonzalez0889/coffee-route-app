@@ -1,35 +1,34 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Desktop (JVM).
+# ☕ Coffee Route
 
-* [/iosApp](./iosApp/iosApp) contains an iOS application. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+**Coffee Route** es una app personal para impulsar la cultura del café: conocer su historia,
+sus beneficios y descubrir lugares donde tomar un buen café.
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+Está construida con **Kotlin Multiplatform** y **Compose Multiplatform**, con un solo código
+de interfaz para **Android, iOS y escritorio**.
 
-### Running the apps
+> 🚧 MVP en desarrollo. La idea es seguir sumando contenido y funcionalidades alrededor del café.
 
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
+## Secciones del MVP
+- **Inicio:** puerta de entrada al mundo del café.
+- **Historia:** el origen del café y su cultura.
+- **Sitios:** lugares recomendados para tomarse un buen café.
 
-- Android app: `./gradlew :androidApp:assembleDebug`
-- Desktop app:
-  - Hot reload: `./gradlew :desktopApp:hotRun --auto`
-  - Standard run: `./gradlew :desktopApp:run`
-- iOS app: open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+## Lo que ya está construido
+- Navegación inferior con las tres secciones del MVP usando **Navigation 3** y rutas tipadas.
+- Historial de navegación independiente por pestaña, que conserva el estado al rotar o volver a la app.
+- Tema visual propio en **Material 3**, inspirado en el café (marrones, cremas y verde hoja de café).
+- Estructura multiplataforma lista para Android, iOS y escritorio.
 
-### Running tests
+## Próximos pasos
+- [ ] Contenido de la sección Historia
+- [ ] Sección de beneficios del café
+- [ ] Listado de sitios con su detalle
+- [ ] Nuevas funcionalidades para seguir impulsando la cultura del café
 
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
+## Tecnologías
+Kotlin Multiplatform · Compose Multiplatform · Material 3 · Navigation 3 · kotlinx.serialization
 
-- Android tests: `./gradlew :shared:testAndroidHostTest`
-- Desktop tests: `./gradlew :shared:jvmTest`
-- iOS tests: `./gradlew :shared:iosSimulatorArm64Test`
-
----
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Cómo ejecutarlo
+- **Android:** `./gradlew :androidApp:assembleDebug`
+- **Escritorio:** `./gradlew :desktopApp:run`
+- **iOS:** abre la carpeta `/iosApp` en Xcode y ejecuta.
