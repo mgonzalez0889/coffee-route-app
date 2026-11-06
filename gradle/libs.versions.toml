@@ -17,6 +17,7 @@ kotlinx-coroutines = "1.11.0"
 material3 = "1.12.0-alpha03"
 navigation3 = "1.2.0"
 kotlinxSerialization = "1.12.0"
+kamel = "1.0.9"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -41,6 +42,7 @@ kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-s
 navigation3-ui = { module = "org.jetbrains.androidx.navigation3:navigation3-ui", version.ref = "navigation3" }
 kotlinx-serialization-core = {module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerialization"}
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+kamel-image = { module = "media.kamel:kamel-image-default", version.ref = "kamel" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
